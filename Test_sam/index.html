@@ -1,0 +1,309 @@
+<html>
+<head>
+<title>Scared</title>
+<link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
+<link rel="stylesheet" href="samplefont/stylesheet.css" type="text/css" charset="utf-8" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+<style>
+
+@keyframes up{
+    from{
+        transform: translate(0, -137%);
+        opacity: 0;
+
+    }
+    to {
+        transform: translate(0,-135.7%);
+        opacity: 1;
+    }
+}
+
+@keyframes up2{
+    from{
+        transform: translate(0px, 190px);
+        opacity: 0;
+
+    }
+    to {
+        transform: translate(0px, 200px);
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes down{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+*{
+    margin: 0;
+    transition: all linear 1s ;
+    overflow: hidden;
+    
+}
+body{
+    background-image: url('sacred4.jpg');
+    background-size: contain;
+    
+    
+}
+
+#second {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(12,23,45,0.6);
+    animation: up linear 0.7s;
+    z-index: 10;
+    visibility: hiden;
+    transform: translate(0,-135.7%);
+}
+#second button{
+    height: 20%;
+    width: 27%;
+    text-align: center;
+    transform: translate(25%, 210%);
+    background-color: rgb(216, 31, 38);
+    border-radius: 39px;
+    box-shadow: 10px 10px 10px rgb(0,0,0);
+    color: aliceblue;
+    font-size: 50px;
+    font-family: 'bebas_kairegular';
+    
+    
+}
+#second button:hover{
+    background-color: rgb(218, 33, 43);
+
+    box-shadow: 19px 19px 10 rgb(80,0,0);
+    opacity: 0.9;
+    text-shadow: 0.3px 0px rgb(255,255,200);
+    font-size: 52px;
+    cursor: pointer;
+}
+
+#second p{
+    color:azure; 
+    transform: translate(30px, 470px);
+    font-family: 'bebas_kairegular';
+
+}
+#open{
+    transform: translate(1170px, 410px) ;
+    height: 11%;
+    width: 11%;
+
+}
+
+
+
+
+.about{
+    text-decoration: none;
+    color: antiquewhite;
+    margin: 0px;
+    padding: 10px;
+    transform: translate(3px,-30px);
+    display: inline-block;   
+    font-family: 'manjariregular';
+    font-size: 15px;
+    opacity: 0.67;
+}
+
+.about:hover{
+    opacity: 1;
+}
+
+#main{
+z-index: 0;
+
+position:sticky;
+visibility:hidden;
+
+}
+#main p{
+    font-size: 60px;
+    transform: translate(750px, -200px);
+    width: 40%;
+    height: 70%;
+    font-family: 'bebas_kairegular';
+
+}
+
+
+textarea{
+    resize: none;
+}
+
+.container-fluid textarea {
+    
+  outline: none;
+  padding: 12px;
+  border-radius: 3px;
+  border: 1px solid black;
+  color: white;
+  font-size: 20px;
+  font-style: all;
+  transform: translate(0px, 100px);
+
+}	
+    ::-webkit-input-placeholder {
+  color: white;
+}
+#git{
+    height: 5%;
+    width: 3%;
+    transform: translate(1090px, -160px);
+    opacity: 0.2;
+}
+#git:hover{
+    box-shadow: 1px 1px 20px rgba(48, 104, 216, 0.951);
+    cursor: pointer;
+    opacity: 0.4;
+}
+
+#submit{
+    height: 20%;
+    width: 27%;
+    text-align: center;
+    transform: translate(55%,-220%);
+    background-color: rgb(216, 31, 38);
+    border-radius: 39px;
+    box-shadow: 10px 10px 10px rgb(0,0,0);
+    color: aliceblue;
+    font-size: 50px;
+    font-family: 'bebas_kairegular';
+    
+}
+
+#final{
+    visibility: hidden;
+}
+#ftext{
+    transform: translate(200px, -1000px);
+}
+
+
+</style>
+</head>
+
+<! NETFLIX RED : (216,31, 38)>
+
+
+
+
+<body>
+
+        <div id="main">
+                
+
+        <div class="container-fluid">
+        <textarea rows="11" cols="30" placeholder="Type" style="background-color: rgba(34, 33, 90, 0.103)" id="rageText" onkeydown="HandleRage()" onkeyup="HandleRage()"></textarea>
+                    
+        </div>
+        
+
+            <p style="color: antiquewhite" id="para">HELLO </p>
+
+               
+        <button  id= "submit" onclick="come()">SUBMIT</button>
+        
+        
+        
+        </div>
+
+
+<div id="second">
+
+<a href = "#" class="about"><b>ABOUT</b></a>
+<a href = "#" class="about"><b>DISCLAIMER</b></a>
+<a href = "#" class="about"><b>DONATE</b></a>
+<a href = "https://github.com/ayushmankumar7/MANSHIK" class="about"><b>CONTRIBUTE</b></a>
+
+
+
+<button onclick="go()" id="wel">WELCOME </button>
+
+<p>Manshik, 2019 Copyright &copy </p>
+<a href="https://en.wikipedia.org/wiki/Open-source_hardware"><img src="open1.svg" id="open"></a>
+<a href= "https://github.com/ayushmankumar7/MANSHIK"><img src="Github-512.png"  id="git"></a>
+
+</div>
+
+
+<div id="final">
+
+    <p id="ftext" style="color: wheat">Hello</p>
+</div>
+
+
+<script>
+
+
+    function go(){
+        var button = document.getElementById("second");
+        var mai = document.getElementById("main");
+        button.style.visibility = "hidden";
+        var wel = document.getElementById("wel");
+        wel.style.visibility = "hidden";
+        var wel2 = document.getElementsByClassName("about");
+
+        button.style.animation= "down linear 1s ";
+        
+        button.style.zIndex = "-1";
+        
+        mai.style.visibility = "visible";
+        mai.style.animation = "up2 linear 1s";
+        document.body.style.backgroundImage= "url('sacred5.jpg')";
+        document.body.style.backgroundSize = "contain";
+
+    }
+    
+    
+    var L = 0;
+    var total = "";
+    var transfer;
+    var x = "";
+    function HandleRage() {
+    // body...	
+    x = document.getElementById("rageText").value;
+    //var
+    
+
+    L = x.length;
+    if(L == 30)
+    {
+    total = total + x + " ";
+    console.log(total);
+    x = "";
+    document.getElementById("rageText").value = x;
+    L = 0;
+    }
+    document.getElementById("para").innerHTML = x;
+    document.getElementById("para").style.transition = "all linear 1s ";
+    transfer = total;
+    }
+    function come(){
+        var button = document.getElementById("submit");
+        var mai = document.getElementById("main");
+        main.style.visibility = "collapse";
+        console.log("New Page: ",transfer);
+        var n = document.getElementById("final");
+        n.style.visibility = "visible"
+        document.getElementById("ftext").value = transfer;
+        button.style.animation = "down linear 1s";
+
+    }
+
+    </script>
+    
+</body>
+
+</html>

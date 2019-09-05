@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <style type="text/css">
+
+        *{
+            transition: all linear 1s;
+        }
+
+
+
+
+     	button{
+     	background: #00b300;
+     	border-width: 0px;
+     	border-radius: 5px;
+     	font-size: 20px;
+     	border-color: #00b300;
+     	color: white;
+     	padding-top: 10px;
+     	padding-bottom: 10px;
+     	padding-right: 15px;
+padding-left: 15px;    	;
+     	margin-top: 15px;
+     	margin-left: 480px;
+     	}
+    textarea {
+    
+  outline: none;
+  padding: 12px;
+  border-radius: 3px;
+  border: 1px solid black;
+  color: white;
+  font-size: 20px;
+  font-style: all;
+
+}	
+    ::-webkit-input-placeholder {
+  color: white;
+}
+
+    </style>
+  </head>
+  <body style="background-color: #101010">
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Page 1</a></li>
+      <li><a href="#">Page 2</a></li>
+      <li><a href="#">Page 3</a></li>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container-fluid">
+  <textarea rows="5" cols="100" placeholder="Type" style="background: #1a1a1a" id="rageText" onkeydown="HandleRage()" onkeyup="HandleRage()"></textarea>
+    <br>
+<button type="button" onclick="WorkOnTheText()">Handle</button>
+
+<br><br><br>
+<textarea rows = "5" cols = 100 placeholder="Type" style="background: #1a1a1a" id="showRage"></textarea>
+    
+</div>
+
+    
+    
+    <br>
+    
+
+    <script type="text/javascript">
+    var L = 0;
+    var x = "";
+    function HandleRage() {
+    // body...	
+    x = document.getElementById("rageText").value;
+    //var
+    L = x.length;
+    if(L == 10)
+    {
+    x = "";
+    document.getElementById("rageText").value = x;
+    L = 0;
+    }
+    document.getElementById("showRage").innerHTML = x;
+    }
+
+    function WorkOnTheText() {
+    // body...
+    var text = document.getElementById("rageText").value;
+    alert("Handling Text..."+L)
+    //transfer it to a tenserflow model to work on it.
+    }
+    </script>
+  </body>
+</html>
